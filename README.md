@@ -10,3 +10,9 @@
 译文地址[iOS核心动画高级技巧](https://github.com/AttackOnDobby/iOS-Core-Animation-Advanced-Techniques)
 
 GitBook地址[iOS核心动画高级技巧 on GitBook](https://zsisme.gitbooks.io/ios-/)
+
+
+
+### <u>*New*</u>
+
+- 修改了一些在iOS10上已经不生效的代码。
