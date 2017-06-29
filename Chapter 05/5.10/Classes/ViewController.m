@@ -23,6 +23,15 @@
 
 @implementation ViewController
 
+- (GLKMatrix4)matrixFrom3DTransformation:(CATransform3D)transform {
+    GLKMatrix4 matrix = GLKMatrix4Make(transform.m11, transform.m12, transform.m13, transform.m14,
+                                       transform.m21, transform.m22, transform.m23, transform.m24,
+                                       transform.m31, transform.m32, transform.m33, transform.m34,
+                                       transform.m41, transform.m42, transform.m43, transform.m44);
+
+    return matrix;
+}
+
 - (void)applyLightingToFace:(CALayer *)face
 {
     //add lighting layer
@@ -33,7 +42,8 @@
     //convert face transform to matrix
     //(GLKMatrix4 has the same structure as CATransform3D)
     CATransform3D transform = face.transform;
-    GLKMatrix4 matrix4 = *(GLKMatrix4 *)&transform;
+//    GLKMatrix4 matrix4 = *(GLKMatrix4 *)&transform;
+    GLKMatrix4 matrix4 = [self matrixFrom3DTransformation:transform];
     GLKMatrix3 matrix3 = GLKMatrix4GetMatrix3(matrix4);
     
     //get face normal
