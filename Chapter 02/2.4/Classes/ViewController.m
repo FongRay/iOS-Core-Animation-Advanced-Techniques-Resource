@@ -37,7 +37,7 @@
 
     //set button 1
     [self addStretchableImage:image
-            withContentCenter:CGRectMake(0.25, 0.25, 0.5, 0.5)
+            withContentCenter:CGRectMake(0.25, 0.25, 1, 1)
                       toLayer:self.button1.layer];
     
     //set button 2

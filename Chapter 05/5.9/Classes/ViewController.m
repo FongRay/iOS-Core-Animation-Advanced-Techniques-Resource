@@ -21,6 +21,8 @@
 {
     //get the face view and add it to the container
     UIView *face = self.faces[index];
+    face.layer.borderWidth = 0.5;
+    face.layer.borderColor = [UIColor blackColor].CGColor;
     [self.containerView addSubview:face];
     
     //center the face view within the container
@@ -40,7 +42,7 @@
     CATransform3D perspective = CATransform3DIdentity;
     perspective.m34 = -1.0 / 500.0;
     perspective = CATransform3DRotate(perspective, -M_PI_4, 1, 0, 0);
-    perspective = CATransform3DRotate(perspective, -M_PI_4, 0, 1, 0);
+    perspective = CATransform3DRotate(perspective, -M_PI_4 * 3, 0, 1, 0);
     self.containerView.layer.sublayerTransform = perspective;
     
     //add cube face 1

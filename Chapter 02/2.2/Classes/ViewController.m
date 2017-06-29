@@ -27,10 +27,13 @@
     self.layerView.layer.contents = (__bridge id)image.CGImage;
     
     //center the image
-    self.layerView.layer.contentsGravity = kCAGravityCenter;
-    
+    self.layerView.layer.contentsGravity = kCAGravityResizeAspect;
+
+    NSLog(@"%f", image.scale);
     //set the contentsScale to match screen
     self.layerView.layer.contentsScale = image.scale;
+
+    self.layerView.layer.contentsRect = CGRectMake(-0.5, -0.5, 0, 0);
     
     //clip the snowman to fit his bounds
     self.layerView.layer.masksToBounds = YES;

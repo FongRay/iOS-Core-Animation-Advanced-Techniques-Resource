@@ -19,13 +19,13 @@
 - (UIButton *)customButton
 {
     //create button
-    CGRect frame = CGRectMake(0, 0, 150, 50);
+    CGRect frame = CGRectMake(0, 0, 120, 50);
     UIButton *button = [[UIButton alloc] initWithFrame:frame];
     button.backgroundColor = [UIColor whiteColor];
     button.layer.cornerRadius = 10;
     
     //add label
-    frame = CGRectMake(20, 10, 110, 30);
+    frame = CGRectMake(20, 10, 90, 30);
     UILabel *label = [[UILabel alloc] initWithFrame:frame];
     label.text = @"Hello World";
     label.textAlignment = NSTextAlignmentCenter;
@@ -40,18 +40,18 @@
 	
     //create opaque button
     UIButton *button1 = [self customButton];
-    button1.center = CGPointMake(50, 150);
+    button1.center = CGPointMake(60, 150);
     [self.containerView addSubview:button1];
     
     //create translucent button
     UIButton *button2 = [self customButton];
-    button2.center = CGPointMake(250, 150);
+    button2.center = CGPointMake(240, 150);
     button2.alpha = 0.5;
     [self.containerView addSubview:button2];
     
     //enable rasterization for the translucent button
-    //button2.layer.shouldRasterize = YES;
-    //button2.layer.rasterizationScale = [UIScreen mainScreen].scale;
+//    button2.layer.shouldRasterize = YES;
+//    button2.layer.rasterizationScale = [UIScreen mainScreen].scale;
 }
 
 @end

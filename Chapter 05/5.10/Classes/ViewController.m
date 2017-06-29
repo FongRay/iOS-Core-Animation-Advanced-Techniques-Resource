@@ -55,6 +55,9 @@
 {
     //get the face view and add it to the container
     UIView *face = self.faces[index];
+    if (index > 3) {
+        face.userInteractionEnabled = NO;
+    }
     [self.containerView addSubview:face];
     
     //center the face view within the container
@@ -109,6 +112,11 @@
     transform = CATransform3DMakeTranslation(0, 0, -100);
     transform = CATransform3DRotate(transform, M_PI, 0, 1, 0);
     [self addFace:5 withTransform:transform];
+}
+
+- (IBAction)btnClicked:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"按钮被点击了!" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
 }
 
 @end

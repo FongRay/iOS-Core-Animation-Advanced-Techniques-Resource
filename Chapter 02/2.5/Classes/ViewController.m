@@ -8,7 +8,7 @@
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface ViewController ()
+@interface ViewController () <CALayerDelegate>
 
 @property (nonatomic, weak) IBOutlet UIView *layerView;
 
@@ -41,7 +41,7 @@
 - (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx
 {
     //draw a thick red circle
-    CGContextSetLineWidth(ctx, 10.0f);
+    CGContextSetLineWidth(ctx, 1.0f);
     CGContextSetStrokeColorWithColor(ctx, [UIColor redColor].CGColor);
     CGContextStrokeEllipseInRect(ctx, layer.bounds);
 }

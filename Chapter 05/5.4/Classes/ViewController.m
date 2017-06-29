@@ -21,7 +21,7 @@
     [super viewDidLoad];
 	
     //rotate the layer 45 degrees along the Y axis
-    CATransform3D transform = CATransform3DMakeRotation(M_PI_4, 0, 1, 0);
+    CATransform3D transform = CATransform3DMakeRotation(M_PI, 0, 1, 0);
     self.layerView.layer.transform = transform;
 }
 

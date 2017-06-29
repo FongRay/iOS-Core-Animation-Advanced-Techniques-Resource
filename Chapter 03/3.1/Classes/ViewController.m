@@ -29,6 +29,11 @@
                                                 selector:@selector(tick)
                                                 userInfo:nil
                                                  repeats:YES];
+
+
+    self.secondHand.layer.anchorPoint = CGPointMake(0.5f, 0.9f);
+    self.minuteHand.layer.anchorPoint = CGPointMake(0.5f, 0.9f);
+    self.hourHand.layer.anchorPoint = CGPointMake(0.5f, 0.9f);
     
     //set initial hand positions
     [self tick];

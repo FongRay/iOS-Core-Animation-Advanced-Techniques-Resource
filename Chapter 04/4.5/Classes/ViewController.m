@@ -23,7 +23,7 @@
     //create mask layer
     CALayer *maskLayer = [CALayer layer];
     maskLayer.frame = self.imageView.bounds;
-    UIImage *maskImage = [UIImage imageNamed:@"Cone.png"];
+    UIImage *maskImage = [UIImage imageNamed:@"Igloo.png"];
     maskLayer.contents = (__bridge id)maskImage.CGImage;
     
     //apply mask to image layer

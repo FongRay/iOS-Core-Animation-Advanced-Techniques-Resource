@@ -27,7 +27,8 @@
     self.layerView.layer.contents = (__bridge id)image.CGImage;
     
     //undistort the image
-    self.layerView.layer.contentsGravity = kCAGravityResizeAspect;
+    self.layerView.layer.contentsGravity = kCAGravityCenter;
+    self.layerView.layer.contentsScale = [UIScreen mainScreen].scale;
 }
 
 @end

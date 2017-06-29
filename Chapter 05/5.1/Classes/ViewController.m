@@ -19,10 +19,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
+
+    NSLog(@"%@", self.layerView);
     //rotate the layer 45 degrees
     CGAffineTransform transform = CGAffineTransformMakeRotation(M_PI_4);
     self.layerView.layer.affineTransform = transform;
+    NSLog(@"%@", self.layerView);
 }
 
 @end

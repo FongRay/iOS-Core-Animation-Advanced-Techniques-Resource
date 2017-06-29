@@ -11,7 +11,7 @@
 @interface ViewController ()
 
 @property (nonatomic, weak) IBOutlet UIView *layerView;
-@property (nonatomic, weak) CALayer *blueLayer;
+@property (nonatomic, strong) CALayer *blueLayer;
 
 @end
 
@@ -20,9 +20,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
+
+    NSLog(@"shit");
     //create sublayer
     self.blueLayer = [CALayer layer];
+    NSLog(@"%@", self.blueLayer);
     self.blueLayer.frame = CGRectMake(50.0f, 50.0f, 100.0f, 100.0f);
     self.blueLayer.backgroundColor = [UIColor blueColor].CGColor;
     
