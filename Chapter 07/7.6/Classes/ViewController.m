@@ -11,7 +11,7 @@
 @interface ViewController ()
 
 @property (nonatomic, weak) IBOutlet UIView *layerView;
-@property (nonatomic, weak) IBOutlet CALayer *colorLayer;
+@property (nonatomic, strong) CALayer *colorLayer;
 
 @end
 
@@ -38,6 +38,7 @@
 
 - (IBAction)changeColor
 {
+    NSLog(@"%f", [CATransaction animationDuration]);
     //randomize the layer background color
     CGFloat red = arc4random() / (CGFloat)INT_MAX;
     CGFloat green = arc4random() / (CGFloat)INT_MAX;

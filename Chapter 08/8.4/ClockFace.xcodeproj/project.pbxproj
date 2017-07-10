@@ -169,6 +169,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Charcoal Design";
+				TargetAttributes = {
+					01F7242D16BEBAF400DB1F0E = {
+						DevelopmentTeam = AV8J5QKX6U;
+					};
+				};
 			};
 			buildConfigurationList = 01F7242916BEBAF400DB1F0E /* Build configuration list for PBXProject "ClockFace" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -286,9 +291,11 @@
 		01F7245216BEBAF400DB1F0E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = AV8J5QKX6U;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Classes/ClockFace-Prefix.pch";
 				INFOPLIST_FILE = "Classes/ClockFace-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fangr.ClockFace;
 				PRODUCT_NAME = ClockFace;
 				WRAPPER_EXTENSION = app;
 			};
@@ -297,9 +304,11 @@
 		01F7245316BEBAF400DB1F0E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = AV8J5QKX6U;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Classes/ClockFace-Prefix.pch";
 				INFOPLIST_FILE = "Classes/ClockFace-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fangr.ClockFace;
 				PRODUCT_NAME = ClockFace;
 				WRAPPER_EXTENSION = app;
 			};

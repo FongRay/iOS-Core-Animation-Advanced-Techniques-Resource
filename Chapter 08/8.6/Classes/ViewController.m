@@ -47,6 +47,7 @@
     animation.keyPath = @"position";
     animation.duration = 4.0;
     animation.path = bezierPath.CGPath;
+    animation.rotationMode = kCAAnimationRotateAuto;
     [shipLayer addAnimation:animation forKey:nil];
 }
 

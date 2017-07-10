@@ -8,7 +8,7 @@
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface ViewController ()
+@interface ViewController () <CAAnimationDelegate>
 
 @property (nonatomic, weak) IBOutlet UIImageView *hourHand;
 @property (nonatomic, weak) IBOutlet UIImageView *minuteHand;
@@ -79,8 +79,10 @@
         CABasicAnimation *animation = [CABasicAnimation animation];
         animation.keyPath = @"transform";
         animation.toValue = [NSValue valueWithCATransform3D:transform];
-        animation.duration = 0.5;
+        animation.duration = 0.2;
         animation.delegate = self;
+        animation.fillMode = kCAFillModeForwards;
+        animation.removedOnCompletion = NO;
         [animation setValue:handView forKey:@"handView"];
         [handView.layer addAnimation:animation forKey:nil];
     }

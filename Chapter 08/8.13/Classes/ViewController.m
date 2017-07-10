@@ -32,7 +32,7 @@
 {    
     [UIView transitionWithView:self.imageView
                       duration:1.0
-                       options:UIViewAnimationOptionTransitionFlipFromLeft
+                       options:UIViewAnimationOptionTransitionCrossDissolve
                     animations:^{
         
         //cycle to next image
