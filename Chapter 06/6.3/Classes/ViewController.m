@@ -53,17 +53,22 @@
     
     //set text attributes
     NSDictionary *attribs = @{
-        (__bridge id)kCTForegroundColorAttributeName:
-            (__bridge id)[UIColor blackColor].CGColor,
-        (__bridge id)kCTFontAttributeName: (__bridge id)fontRef
+//        (__bridge id)kCTForegroundColorAttributeName:
+//            (__bridge id)[UIColor blackColor].CGColor,
+//        (__bridge id)kCTFontAttributeName: (__bridge id)fontRef
+        NSForegroundColorAttributeName: [UIColor blackColor],
+        NSFontAttributeName: font
     };
     [string setAttributes:attribs range:NSMakeRange(0, [text length])];
     attribs = @{
-        (__bridge id)kCTForegroundColorAttributeName:
-            (__bridge id)[UIColor redColor].CGColor,
-        (__bridge id)kCTUnderlineStyleAttributeName:
-            @(kCTUnderlineStyleSingle),
-        (__bridge id)kCTFontAttributeName: (__bridge id)fontRef
+//        (__bridge id)kCTForegroundColorAttributeName:
+//            (__bridge id)[UIColor redColor].CGColor,
+//        (__bridge id)kCTUnderlineStyleAttributeName:
+//            @(kCTUnderlineStyleSingle),
+//        (__bridge id)kCTFontAttributeName: (__bridge id)fontRef
+        NSForegroundColorAttributeName: [UIColor redColor],
+        NSUnderlineStyleAttributeName: @(NSUnderlineStyleDouble),
+        NSFontAttributeName: font
     };
     [string setAttributes:attribs range:NSMakeRange(6, 5)];
     

@@ -8,8 +8,11 @@
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import <AVFoundation/AVFoundation.h>
+#import <CoreMedia/CoreMedia.h>
 
-@interface ViewController ()
+@interface ViewController () {
+    AVPlayer *_player;
+}
 
 @property (nonatomic, weak) IBOutlet UIView *containerView;
 
@@ -26,15 +29,25 @@
                                          withExtension:@"mp4"];
     
     //create player and player layer
-    AVPlayer *player = [AVPlayer playerWithURL:URL];
-    AVPlayerLayer *playerLayer = [AVPlayerLayer playerLayerWithPlayer:player];    
+    _player = [AVPlayer playerWithURL:URL];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playbackFinished:) name:AVPlayerItemDidPlayToEndTimeNotification object:_player.currentItem];
+    AVPlayerLayer *playerLayer = [AVPlayerLayer playerLayerWithPlayer:_player];
     
     //set player layer frame and attach it to our view
     playerLayer.frame = self.containerView.bounds;
     [self.containerView.layer addSublayer:playerLayer];
 
-    //play the video
-    [player play];
+    [_player play];
+}
+
+- (void)playbackFinished:(NSNotification *)notification {
+    NSLog(@"Play Finished!");
+    [_player seekToTime:CMTimeMake(0, 1)];
+    [_player play];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

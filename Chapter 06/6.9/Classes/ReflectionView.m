@@ -20,9 +20,10 @@
     //configure replicator
     CAReplicatorLayer *layer = (CAReplicatorLayer *)self.layer;
     layer.instanceCount = 2;
-    
+
     //move reflection instance below original and flip vertically
     CATransform3D transform = CATransform3DIdentity;
+    transform.m34 = - 1.0 / 500.0;
     CGFloat verticalOffset = self.bounds.size.height + 2;
     transform = CATransform3DTranslate(transform, 0, verticalOffset, 0);
     transform = CATransform3DScale(transform, 1, -1, 0);
@@ -45,6 +46,7 @@
 - (void)awakeFromNib
 {
     //this is called when view is created from a nib
+    [super awakeFromNib];
     [self setUp];
 }
 

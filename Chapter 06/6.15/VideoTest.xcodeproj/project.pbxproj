@@ -20,6 +20,7 @@
 		01F7243416BEBAF400DB1F0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F7243316BEBAF400DB1F0E /* Foundation.framework */; };
 		01F7243616BEBAF400DB1F0E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F7243516BEBAF400DB1F0E /* CoreGraphics.framework */; };
 		01F7245516BEBB6000DB1F0E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F7245416BEBB6000DB1F0E /* QuartzCore.framework */; };
+		71223B111F134209007A7E2D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71223B101F134209007A7E2D /* CoreMedia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		01F7243316BEBAF400DB1F0E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		01F7243516BEBAF400DB1F0E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		01F7245416BEBB6000DB1F0E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		71223B101F134209007A7E2D /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71223B111F134209007A7E2D /* CoreMedia.framework in Frameworks */,
 				01DFBEE716E17344008F85FF /* AVFoundation.framework in Frameworks */,
 				01F7245516BEBB6000DB1F0E /* QuartzCore.framework in Frameworks */,
 				01F7243216BEBAF400DB1F0E /* UIKit.framework in Frameworks */,
@@ -122,6 +125,7 @@
 		01F7243016BEBAF400DB1F0E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				71223B101F134209007A7E2D /* CoreMedia.framework */,
 				01F7243116BEBAF400DB1F0E /* UIKit.framework */,
 				01F7243316BEBAF400DB1F0E /* Foundation.framework */,
 				01F7243516BEBAF400DB1F0E /* CoreGraphics.framework */,

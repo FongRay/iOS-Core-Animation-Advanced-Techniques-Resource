@@ -91,13 +91,13 @@
     
     //set up the transform for cube 1 and add it
     CATransform3D c1t = CATransform3DIdentity;
-    c1t = CATransform3DTranslate(c1t, -100, 0, 0);
+    c1t = CATransform3DTranslate(c1t, -70, 0, 0);
     CALayer *cube1 = [self cubeWithTransform:c1t];
     [self.containerView.layer addSublayer:cube1];
     
     //set up the transform for cube 2 and add it
     CATransform3D c2t = CATransform3DIdentity;
-    c2t = CATransform3DTranslate(c2t, 100, 0, 0);
+    c2t = CATransform3DTranslate(c2t, 70, 0, 0);
     c2t = CATransform3DRotate(c2t, -M_PI_4, 1, 0, 0);
     c2t = CATransform3DRotate(c2t, -M_PI_4, 0, 1, 0);
     CALayer *cube2 = [self cubeWithTransform:c2t];

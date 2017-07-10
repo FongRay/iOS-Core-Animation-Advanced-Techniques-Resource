@@ -31,7 +31,7 @@
                              (__bridge id)[UIColor greenColor].CGColor];
     
     //set locations
-    gradientLayer.locations = @[@0.0, @0.25, @0.5];
+    gradientLayer.locations = @[@0.0, @0.5, @0.75];
     
     //set gradient start and end points
     gradientLayer.startPoint = CGPointMake(0, 0);

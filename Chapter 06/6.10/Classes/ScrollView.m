@@ -40,6 +40,7 @@
 - (void)awakeFromNib
 {
     //this is called when view is created from a nib
+    [super awakeFromNib];
     [self setUp];
 }
 
@@ -50,9 +51,11 @@
     CGPoint offset = self.bounds.origin;
     offset.x -= [recognizer translationInView:self].x;
     offset.y -= [recognizer translationInView:self].y;
-    
-    //scroll the layer
-    [(CAScrollLayer *)self.layer scrollToPoint:offset];
+
+    if (CGRectContainsPoint(CGRectMake(0, 0, 300, 300), offset)) {
+        //scroll the layer
+        [(CAScrollLayer *)self.layer scrollToPoint:offset];
+    }
 
     //reset the pan gesture translation
     [recognizer setTranslation:CGPointZero inView:self];
